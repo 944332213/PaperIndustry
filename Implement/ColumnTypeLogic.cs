@@ -8,6 +8,9 @@ using Lushi.PaperProducts.Model.Table;
 
 namespace Lushi.PaperProducts.BusinessLogicLayer.Implement
 {
+    /// <summary>
+    /// 栏目类型业务逻辑
+    /// </summary>
     public class ColumnTypeLogic
     {
         #region 静态化
@@ -17,7 +20,7 @@ namespace Lushi.PaperProducts.BusinessLogicLayer.Implement
 
         internal static bool IsEstablish;
 
-        protected static ColumnTypeDao Dao { get { return new ColumnTypeDao(); } }
+        protected static ColumnTypeDao Dao => new ColumnTypeDao();
 
         static ColumnTypeLogic()
         {

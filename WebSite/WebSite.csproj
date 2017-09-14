@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -101,6 +103,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Css\body.css" />
+    <Content Include="Css\head.css" />
     <Content Include="Css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Image\020160518122553919.jpg" />
@@ -109,6 +113,16 @@
     <Content Include="Image\320160418013134307.png" />
     <Content Include="Image\420160418013146422.png" />
     <Content Include="Image\520160418013209191.png" />
+    <Content Include="Image\head\line1.png" />
+    <Content Include="Image\head\logo.png" />
+    <Content Include="Image\head\menu\brand.png" />
+    <Content Include="Image\head\menu\store.png" />
+    <Content Include="Image\head\menu\cuturel.png" />
+    <Content Include="Image\head\menu\home.png" />
+    <Content Include="Image\head\menu\job.png" />
+    <Content Include="Image\head\menu\join.png" />
+    <Content Include="Image\head\menu\news.png" />
+    <Content Include="Image\head\menu\tel.png" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Web.config" />

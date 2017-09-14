@@ -1,0 +1,26 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    background: #fff fixed no-repeat center center;
+    color: #363636;
+    font-family: "microsoft yahei",Arial;
+    font-size: 12px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    list-style-image: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:link {
+    color: #363636;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #363636;
+    text-decoration: none;
+}

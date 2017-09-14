@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.Sql.Table;
 using System.Data.Sql.Table.Attribute;
 
@@ -17,8 +18,11 @@ namespace Lushi.PaperProducts.Model.Table
         public EnumColumnTypeLevel.Value Level { get; set; }
 
         public int ParentId { get; set; }
-
+        
         public EnumCharacter.Value Character { get; set; }
+
+        [TableFieldInfo(SqlDbType.Int)]
+        public int Icon { get; set; }
 
         public int Rank { get; set; }
 

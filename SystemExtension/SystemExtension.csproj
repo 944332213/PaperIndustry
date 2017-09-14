@@ -49,11 +49,11 @@
     <Compile Include="DateTimeExtension.cs" />
     <Compile Include="PermitImplement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sql\DataBaseTypeData.cs" />
-    <Compile Include="Sql\SqlDataType.cs" />
-    <Compile Include="Sql\Table\Attribute\NotTableFieldAttribute.cs" />
-    <Compile Include="Sql\Table\Attribute\TableFieldInfoAttribute.cs" />
-    <Compile Include="Sql\Table\TableFieldLable.cs" />
+    <Compile Include="Data\Sql\DataBaseTypeData.cs" />
+    <Compile Include="Data\Sql\SqlDataType.cs" />
+    <Compile Include="Data\Sql\Table\Attribute\NotTableFieldAttribute.cs" />
+    <Compile Include="Data\Sql\Table\Attribute\TableFieldInfoAttribute.cs" />
+    <Compile Include="Data\Sql\Table\TableFieldLable.cs" />
     <Compile Include="StringExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

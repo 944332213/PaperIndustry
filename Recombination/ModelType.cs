@@ -41,6 +41,8 @@ namespace Lushi.PaperProducts.Model.Recombination
             set { _mParent = value; }
         }
 
+        public new StructMenuIcon.Value Icon => (StructMenuIcon.Value)base.Icon;
+
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             var propertyInfos = TypeData.GetPropertys<ModelType>();

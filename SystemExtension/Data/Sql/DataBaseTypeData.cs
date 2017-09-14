@@ -44,7 +44,7 @@ namespace System.Data.Sql
                        (_mPropertySqlParameterCollection =
                            (GetPropertys<T>() ?? new PropertyInfo[0]).ToDictionary(item => item, item =>
                            {
-                               if (item.GetCustomAttribute(typeof(NotTableFieldAttribute)) as NotTableFieldAttribute != null)
+                               if (item.GetCustomAttribute(typeof(NotTableFieldAttribute)) is NotTableFieldAttribute)
                                {
                                    return null;
                                }

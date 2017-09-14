@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Lushi.PaperProducts.DataAccessLayer.DataBase;
+﻿using Lushi.PaperProducts.DataAccessLayer.DataBase;
 
 namespace Lushi.PaperProducts.BusinessLogicLayer.Implement
 {
+    /// <summary>
+    /// 留言板业务逻辑
+    /// </summary>
     public class GuestbookLogic
     {
-        protected GuestbookDao Dao { get { return new GuestbookDao(); } }
+        protected GuestbookDao Dao => new GuestbookDao();
     }
 }

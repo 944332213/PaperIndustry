@@ -6,6 +6,13 @@
     [AttributeUsage(AttributeTargets.Property)]
     public class TableFieldInfoAttribute : System.Attribute
     {
+        public TableFieldInfoAttribute() { }
+
+        public TableFieldInfoAttribute(SqlDbType type)
+        {
+            Type = type;
+        }
+
         /// <summary>
         /// 标签
         /// </summary>

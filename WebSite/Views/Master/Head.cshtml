@@ -1,9 +1,21 @@
-﻿@model $model$
+﻿@model Lushi.PaperProducts.Ui.WebSite.Model.Master.ModelViewHead
 
 @{
-  ViewBag.Title = "$title$";
-  Layout = "$_Layout$";
+    Layout = null;
 }
-
-<h2>$title$</h2>
-$END$
+<div class="head">
+    <div class="menu">
+        <div class="columnSpace">
+            <img src="/image/head/logo.png" alt="logo" />
+        </div>
+        @if (Model.Column != null)
+        {
+            <ul>
+                @foreach (var m in Model.Column)
+                {
+                    <li><a href="/@m.EnName" style="background: url(@m.Icon.Url) no-repeat center 15px">@m.Name</a></li>
+                }
+            </ul>
+        }
+    </div>
+</div>
