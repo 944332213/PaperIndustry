@@ -1,0 +1,142 @@
+﻿@{
+    Layout = "~/Views/Master/Index.cshtml";
+    ViewBag.Title = "Index";
+}
+@section style{
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+}
+<div id="carousel">
+    <div id="carousel-inner" style="width: 1194px;">
+
+        <div style="width: 1194px;" id="carousel-inner">
+
+            <div style="width: 1194px;" id="carousel-inner">
+
+
+
+                <div style="z-index: 6; left: 0px;" class="bar">
+
+                    <div class="hover"></div>
+
+                    <img src="/image/020160518122553919.jpg" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
+
+                    <a href="/list-94-1.html">
+
+                        <p>走进居家</p>Home
+
+                    </a>
+
+                </div>
+
+
+
+                <div style="z-index: 5; left: 0px;" class="bar">
+
+                    <div class="hover"></div>
+
+                    <img src="/image/120160518022827342.jpg" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
+
+                    <a href="/list-19-1.html">
+
+                        <p>新闻资讯</p>News
+
+                    </a>
+
+                </div>
+
+
+
+                <div style="z-index: 4; left: 0px;" class="bar">
+
+                    <div class="hover"></div>
+
+                    <img src="/image/220160601110845211.jpg" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
+
+                    <a href="/list-11-1.html">
+
+                        <p>产品展示</p>Products
+
+                    </a>
+
+                </div>
+
+
+
+                <div style="z-index: 3; left: 0px;" class="bar">
+
+                    <div class="hover"></div>
+
+                    <img src="/image/320160418013134307.png" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
+
+                    <a href="#">
+
+                        <p>网上购买</p> online
+
+                    </a>
+
+                </div>
+
+
+
+                <div style="z-index: 2; left: 0px;" class="bar">
+
+                    <div class="hover"></div>
+
+                    <img src="/image/420160418013146422.png" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
+
+                    <a href="/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=93">
+
+                        <p>留言版</p> message
+
+                    </a>
+
+                </div>
+
+
+
+                <div style="z-index: 1; left: 0px;" class="bar">
+
+                    <div class="hover"></div>
+
+                    <img src="/image/520160418013209191.png" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
+
+                    <a href="/list-20-1.html">
+
+                        <p>联系我们</p>contact
+
+                    </a>
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+
+            $(".left_bg dl").hide();
+
+            $(".left_bg nav ul li a").bind("click", function () {
+
+                $(this).parent().find("dl").slideToggle();
+
+                $(this).parent().siblings().find("dl").slideUp();
+
+            });
+
+        })
+
+    </script>
+}

@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head data-gjch="///index@mobile=3g">
+    <meta charset="UTF-8" />
+    <meta name="applicable-device" content="mobile" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="address=no" />
+    @if (!string.IsNullOrWhiteSpace(ViewBag.KeyWords))
+    {
+        <meta name="keywords" content="@ViewBag.KeyWords" />
+    }
+    @if (!string.IsNullOrWhiteSpace(ViewBag.Description))
+    {
+        <meta name="description" content="@ViewBag.Description" />
+    }
+    <meta name="author" content="">
+    <title>@Html.Raw(ViewBag.Title)</title>
+    <script>
+        var serverData = {};
+    </script>
+    @RenderSection("style", required: false)
+</head>
+@{
+    var bodyAttr = (ViewBag.BodyAttr as IDictionary<string, string>) ?? new Dictionary<string, string>();
+}
+<body @foreach (var attr in bodyAttr) { Html.Raw(string.Format("{0}=\"{1}\"", attr.Key, attr.Value)); }>
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+</body>
+</html>
