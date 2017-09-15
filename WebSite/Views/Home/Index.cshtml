@@ -3,9 +3,11 @@
     ViewBag.Title = "Index";
 }
 @section style{
-    <link type="text/css" rel="stylesheet" href="/css/body.css" />
-    <link type="text/css" rel="stylesheet" href="/css/head.css" />
-    @*<link type="text/css" rel="stylesheet" href="/css/style.css" />*@
+    <link rel="stylesheet" href="/css/body.css" />
+    <link rel="stylesheet" href="/css/head.css" />
+    @*<link rel="stylesheet" href="/css/style.css" />*@
+
+    <script src="/scripts/jquery-1.10.2.min.js"></script>
 }
 @Html.Action("Head", "Master")
 @*<div id="carousel">
@@ -123,7 +125,7 @@
 
         </div>
     </div>*@
-
+@Html.Action("Bottom", "Master")
 @section scripts{
     <script src="/Scripts/jquery-1.10.2.min.js"></script>
     <script>

@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumCharacter.cs" />
+    <Compile Include="EnumColumnTypeDisplayModel.cs" />
     <Compile Include="EnumColumnTypeLevel.cs" />
     <Compile Include="EnumStatus.cs" />
+    <Compile Include="EnumValueName.cs" />
     <Compile Include="StructMenuIcon.cs" />
     <Compile Include="ModelColumnType.cs" />
     <Compile Include="ModelArticle.cs" />

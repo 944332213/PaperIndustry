@@ -19,10 +19,15 @@ namespace Lushi.PaperProducts.Ui.WebSite.Controllers
 
             Try(() =>
             {
-                view.Column = ColumnTypeLogic.GetListParent();
+                view.Navigation = ColumnTypeLogic.GetListNavigation();
             });
 
             return View(view);
+        }
+
+        public ActionResult Bottom()
+        {
+            return View();
         }
 
     }

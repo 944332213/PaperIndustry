@@ -5,6 +5,6 @@ namespace Lushi.PaperProducts.Ui.WebSite.Model.Master
 {
     public class ModelViewHead
     {
-        public List<ModelType> Column { get; set; }
+        public List<ModelType> Navigation { get; set; }
     }
 }

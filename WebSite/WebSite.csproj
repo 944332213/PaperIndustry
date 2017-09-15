@@ -137,6 +137,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Model\Home\ModelViewIndex.cs" />
     <Compile Include="Model\Master\ModelViewHead.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -147,6 +148,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Master\Index.cshtml" />
     <Content Include="Views\Master\Head.cshtml" />
+    <Content Include="Views\Master\Bottom.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -169,6 +171,10 @@
     <ProjectReference Include="..\Recombination\Recombination.csproj">
       <Project>{e15b3019-c47c-4614-9f2d-b640d3957c5c}</Project>
       <Name>Recombination</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Serialize\Serialize.csproj">
+      <Project>{c9a9c445-8034-4fae-820c-2e9a236acea8}</Project>
+      <Name>Serialize</Name>
     </ProjectReference>
     <ProjectReference Include="..\Table\Table.csproj">
       <Project>{3636ff93-047a-48c6-91fd-58f14624e132}</Project>

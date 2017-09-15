@@ -1,4 +1,5 @@
-﻿@model Lushi.PaperProducts.Ui.WebSite.Model.Master.ModelViewHead
+﻿@using Lushi.PaperProducts.Model.Recombination
+@model Lushi.PaperProducts.Ui.WebSite.Model.Master.ModelViewHead
 
 @{
     Layout = null;
@@ -8,12 +9,12 @@
         <div class="columnSpace">
             <img src="/image/head/logo.png" alt="logo" />
         </div>
-        @if (Model.Column != null)
+        @if (Model.Navigation != null)
         {
             <ul>
-                @foreach (var m in Model.Column)
+                @foreach (var m in Model.Navigation)
                 {
-                    <li><a href="/@m.EnName" style="background: url(@m.Icon.Url) no-repeat center 15px">@m.Name</a></li>
+                    <li><a href="@m.Url()" style="background: url(@m.Icon.Url) no-repeat center 15px">@m.Name</a></li>
                 }
             </ul>
         }

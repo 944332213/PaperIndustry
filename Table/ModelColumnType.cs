@@ -18,8 +18,12 @@ namespace Lushi.PaperProducts.Model.Table
         public EnumColumnTypeLevel.Value Level { get; set; }
 
         public int ParentId { get; set; }
+
+        public string Url { get; set; }
         
         public EnumCharacter.Value Character { get; set; }
+
+        public EnumColumnTypeDisplayModel.Value DisplayModel { get; set; }
 
         [TableFieldInfo(SqlDbType.Int)]
         public int Icon { get; set; }

@@ -11,10 +11,10 @@ namespace Lushi.PaperProducts.Ui.WebSite.Controllers
             {
                 action();
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                { }
+                Response.Write($"<!--{exception}-->");
             }
         }
-	}
+    }
 }

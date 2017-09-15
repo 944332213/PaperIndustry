@@ -32,7 +32,6 @@ namespace Lushi.PaperProducts.Model.Recombination
                 }
                 propertyInfo.SetValue(this, value);
             }
-
         }
 
         public ModelType Parent
@@ -54,6 +53,30 @@ namespace Lushi.PaperProducts.Model.Recombination
                 }
                 info.AddValue(propertyInfo.Name, propertyInfo.GetValue(this), propertyInfo.PropertyType);
             }
+        }
+    }
+
+    public static class ModelTypeExtension
+    {
+        public static string Url(this ModelType model)
+        {
+            if (model == null)
+            {
+                return string.Empty;
+            }
+            if (!string.IsNullOrWhiteSpace(model.Url))
+            {
+                return model.Url;
+            }
+            if (model.Level == EnumColumnTypeLevel.Value.One)
+            {
+                return $"/{model.EnName}";
+            }
+            if (model.Level == EnumColumnTypeLevel.Value.Two)
+            {
+                return $"/{model.Parent.EnName}/{model.EnName}";
+            }
+            return string.Empty;
         }
     }
 }

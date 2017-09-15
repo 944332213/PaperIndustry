@@ -208,5 +208,17 @@ namespace Lushi.PaperProducts.BusinessLogicLayer.Implement
                          parentId > 0 && item.Parent.Id == parentId)).OrderByDescending(item => item.Rank).ToList();
         }
 
+        public static List<ModelType> GetListNavigation()
+        {
+            return GetListParent().Where(item =>
+                (item.Character & EnumCharacter.Value.Recommend) != 0).ToList();
+        }
+
+        public static List<ModelType> GetListIndex()
+        {
+            return GetListParent().Where(item =>
+                (item.Character & EnumCharacter.Value.Index) != 0).ToList();
+        }
+
     }
 }
