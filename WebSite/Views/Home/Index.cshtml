@@ -1,135 +1,210 @@
-﻿@{
+﻿@using Lushi.PaperProducts.Model.Table
+@using Lushi.PaperProducts.Ui.WebSite.Model
+@model Lushi.PaperProducts.Ui.WebSite.Model.Home.ModelViewIndex
+@{
     Layout = "~/Views/Master/Index.cshtml";
     ViewBag.Title = "Index";
 }
 @section style{
+    @*<link rel="stylesheet" href="/css/style.css" />*@
     <link rel="stylesheet" href="/css/body.css" />
     <link rel="stylesheet" href="/css/head.css" />
-    @*<link rel="stylesheet" href="/css/style.css" />*@
+    <link rel="stylesheet" href="/css/home.css" />
+
+    <link rel="stylesheet" href="/css/effect/carousel/slider.css" />
 
     <script src="/scripts/jquery-1.10.2.min.js"></script>
 }
 @Html.Action("Head", "Master")
-@*<div id="carousel">
-        <div id="carousel-inner" style="width: 1194px;">
+@if (Model.Column != null)
+{
+    foreach (var keyValue in Model.Column)
+    {
+        if (keyValue.Value == null || keyValue.Value.Count <= 0)
+        {
+            continue;
+        }
+        switch (keyValue.Key.DisplayModel)
+        {
+            case EnumColumnTypeDisplayModel.Value.Conventional:
+                {
 
-            <div style="width: 1194px;" id="carousel-inner">
-
-                <div style="width: 1194px;" id="carousel-inner">
-
-
-
-                    <div style="z-index: 6; left: 0px;" class="bar">
-
-                        <div class="hover"></div>
-
-                        <img src="/image/020160518122553919.jpg" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
-
-                        <a href="/list-94-1.html">
-
-                            <p>走进居家</p>Home
-
-                        </a>
-
+                    break;
+                }
+            case EnumColumnTypeDisplayModel.Value.Carousel:
+                {
+                    var list = keyValue.Value.Where(item => !string.IsNullOrEmpty(item.EffectPicture)).ToList();
+                    if (list.Count <= 0)
+                    {
+                        continue;
+                    }
+                    <div class="slider-container">
+                        <div class="slider">
+                            @foreach (var m in list)
+                            {
+                                <div class="slider__item">
+                                    <img src="@m.EffectPicture" alt="@m.Title" />
+                                    @if (!string.IsNullOrEmpty(m.Intro))
+                                    {
+                                        <span class="slider__caption">@m.Intro</span>
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div class="slider__switch slider__switch--prev" data-ikslider-dir="prev">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13.89 17.418c.27.272.27.71 0 .98s-.7.27-.968 0l-7.83-7.91c-.268-.27-.268-.706 0-.978l7.83-7.908c.268-.27.7-.27.97 0s.267.71 0 .98L6.75 10l7.14 7.418z" /></svg></span>
+                        </div>
+                        <div class="slider__switch slider__switch--next" data-ikslider-dir="next">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13.25 10L6.11 2.58c-.27-.27-.27-.707 0-.98.267-.27.7-.27.968 0l7.83 7.91c.268.27.268.708 0 .978l-7.83 7.908c-.268.27-.7.27-.97 0s-.267-.707 0-.98L13.25 10z" /></svg></span>
+                        </div>
                     </div>
-
-
-
-                    <div style="z-index: 5; left: 0px;" class="bar">
-
-                        <div class="hover"></div>
-
-                        <img src="/image/120160518022827342.jpg" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
-
-                        <a href="/list-19-1.html">
-
-                            <p>新闻资讯</p>News
-
-                        </a>
-
+                    break;
+                }
+            case EnumColumnTypeDisplayModel.Value.Tile:
+                {
+                    var list = keyValue.Value.Where(item => !string.IsNullOrEmpty(item.EffectPicture)).ToList();
+                    if (list.Count <= 0)
+                    {
+                        continue;
+                    }
+                    var style = string.Format("style=width: {0:P2};", 1.0 / list.Count);
+                    <div class="page">
+                        @foreach (var m in list)
+                        {
+                            <div class="list" @style>
+                                <div class="pic-module">
+                                    <div class="pic">
+                                        <a href="@m.Url()" target="_self" title="@m.Title">
+                                            <img src="@m.EffectPicture" alt="@m.Title" @Model.ErrorImage()>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="new-module" style="display: none;">
+                                    <h3>
+                                        <a title="@m.Title" href="@m.Url()" target="_self">@m.Title</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        }
                     </div>
+                    break;
+                }
+            case EnumColumnTypeDisplayModel.Value.Roll:
+                {
+                    break;
+                }
+        }
+    }
+}
 
-
-
-                    <div style="z-index: 4; left: 0px;" class="bar">
-
-                        <div class="hover"></div>
-
-                        <img src="/image/220160601110845211.jpg" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
-
-                        <a href="/list-11-1.html">
-
-                            <p>产品展示</p>Products
-
-                        </a>
-
-                    </div>
-
-
-
-                    <div style="z-index: 3; left: 0px;" class="bar">
-
-                        <div class="hover"></div>
-
-                        <img src="/image/320160418013134307.png" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
-
-                        <a href="#">
-
-                            <p>网上购买</p> online
-
-                        </a>
-
-                    </div>
-
-
-
-                    <div style="z-index: 2; left: 0px;" class="bar">
-
-                        <div class="hover"></div>
-
-                        <img src="/image/420160418013146422.png" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
-
-                        <a href="/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=93">
-
-                            <p>留言版</p> message
-
-                        </a>
-
-                    </div>
-
-
-
-                    <div style="z-index: 1; left: 0px;" class="bar">
-
-                        <div class="hover"></div>
-
-                        <img src="/image/520160418013209191.png" alt="" style="height: 950px; width: 238px; left: -19px; top: 0px;">
-
-                        <a href="/list-20-1.html">
-
-                            <p>联系我们</p>contact
-
-                        </a>
-
-                    </div>
-
-
-
-
-
-
-
-                </div>
-
-            </div>
-
+<div class="slider-container">
+    <div class="slider">
+        <div class="slider__item">
+            <img src="/image/home/carousel/50755c41-857b-41b6-8008-e6cffd18d900.jpg" alt="" />
+            <span class="slider__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<a href="">Далее >></a> </span>
         </div>
-    </div>*@
+        <div class="slider__item">
+            <img src="/image/home/carousel/9d8d9762-08d7-46a3-bd7a-035ad13c53ac.jpg" alt="" />
+        </div>
+        <div class="slider__item">
+            <img src="/image/home/carousel/f77d31b5-370d-4c5b-af17-626cb5a669da.jpg" alt="" />
+        </div>
+        <div class="slider__item">
+            <img src="/image/home/carousel/b2174f71-51d7-4545-b768-3bb15c379b56.jpg" alt="" />
+        </div>
+    </div>
+    <div class="slider__switch slider__switch--prev" data-ikslider-dir="prev">
+        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13.89 17.418c.27.272.27.71 0 .98s-.7.27-.968 0l-7.83-7.91c-.268-.27-.268-.706 0-.978l7.83-7.908c.268-.27.7-.27.97 0s.267.71 0 .98L6.75 10l7.14 7.418z" /></svg></span>
+    </div>
+    <div class="slider__switch slider__switch--next" data-ikslider-dir="next">
+        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13.25 10L6.11 2.58c-.27-.27-.27-.707 0-.98.267-.27.7-.27.968 0l7.83 7.91c.268.27.268.708 0 .978l-7.83 7.908c-.268.27-.7.27-.97 0s-.267-.707 0-.98L13.25 10z" /></svg></span>
+    </div>
+</div>
+
+<div class="page">
+    <div class="list" style="width: 30%;">
+        <div class="pic-module">
+            <div class="pic">
+                <a href="/products_list/pmcId=17.html" target="_self" title="一生相伴">
+                    <img src="/image/home/tile/38691b91-2079-45d2-a758-5736e02f0f07.jpg" alt="一生相伴" onerror="this.src='/images/common/noimage.jpg'">
+                </a>
+            </div>
+        </div>
+        <div class="new-module" style="display: none;">
+            <h3>
+                <a title="一生相伴" href="/products_list/pmcId=17.html" target="_self">一生相伴</a>
+            </h3>
+        </div>
+    </div>
+    <div class="list">
+        <div class="pic-module">
+            <div class="pic">
+                <a href="/products_list/pmcId=18.html" target="_self" title="开心朵朵">
+                    <img src="/image/home/tile/7d5f70b8-9fca-47ed-838b-b77d3739a075.jpg" alt="开心朵朵" onerror="this.src='/images/common/noimage.jpg'">
+                </a>
+            </div>
+        </div>
+        <div class="new-module" style="display: none;">
+            <h3>
+                <a title="开心朵朵" href="/products_list/pmcId=18.html" target="_self">开心朵朵</a>
+            </h3>
+            <p class="summary">
+                开心朵朵的设计灵感来源于对未来美好生活的向往。该品牌包含茶语、尊贵、茉莉花、复古、开心宝贝等多个系列。产品采用100%四川生态竹浆，国际领先设备及独特工艺制造。纸质柔韧厚实，品类规格齐全，系列丰富多样，超高的性价比可以满足大众消费者的不同需求。 品牌理念：开心与否在于自己的决定。
+            </p>
+            <div class="linkarea">
+                <a href="/products_list/pmcId=23.html" target="_self" title="茶语系列">茶语系列</a>
+                <a href="/products_list/pmcId=24.html" target="_self" title="茉莉花系列">茉莉花系列</a>
+                <a href="/products_list/pmcId=25.html" target="_self" title="尊贵系列">尊贵系列</a>
+                <a href="/products_list/pmcId=26.html" target="_self" title="开心宝贝系列">开心宝贝系列</a>
+                <a href="/products_list/pmcId=29.html" target="_self" title="小熊系列">小熊系列</a>
+                <a href="/products_list/pmcId=27.html" target="_self" title="复古系列">复古系列</a>
+                <a href="/products_list/pmcId=28.html" target="_self" title="经典系列">经典系列</a>
+            </div>
+        </div>
+    </div>
+    <div class="list">
+        <div class="pic-module">
+            <div class="pic">
+                <a href="/products_list/pmcId=21.html" target="_self" title="朵洁">
+                    <img src="/image/home/tile/790191aa-2986-498b-b2ed-fa98d1a1f762.jpg" alt="朵洁" onerror="this.src='/images/common/noimage.jpg'">
+                </a>
+            </div>
+        </div>
+        <div class="new-module" style="display: none;">
+            <h3>
+                <a title="朵洁" href="/products_list/pmcId=21.html" target="_self">朵洁</a>
+            </h3>
+            <p class="summary">
+                全新升级后的包装以蓝色经典为主调，配合独特长短纤配比，纸质柔韧厚实。品质与实惠共存，在价格上同样给消费者带来福利与惊喜。洁净、健康、舒适是我们给您的保证!　　 品牌理念：洁净生活从每一天清晨开始。
+            </p>
+            <div class="linkarea">
+                <a href="/products_list/pmcId=30.html" target="_self" title="朵洁系列">朵洁系列</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 @Html.Action("Bottom", "Master")
 @section scripts{
-    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/scripts/effect/carousel/slider.js"></script>
     <script>
         $(function () {
+            if ($(".slider-container").length > 0) {
+                $(".slider-container").ikSlider({
+                    delay: 5000,
+                    speed: 300
+                });
+            }
+
+            $(".page").filter(function () {
+                return $(this).find(".pic-module").length > 0;
+            }).on("mouseenter", ".list",
+                function () {
+                    $(this).find(".new-module").fadeIn();
+                }).on("mouseleave", ".list",
+                function () {
+                    $(this).find(".new-module").fadeOut();
+                });
 
             $(".left_bg dl").hide();
 
@@ -142,6 +217,5 @@
             });
 
         })
-
     </script>
 }

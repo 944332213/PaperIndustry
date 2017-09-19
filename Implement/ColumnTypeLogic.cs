@@ -210,14 +210,12 @@ namespace Lushi.PaperProducts.BusinessLogicLayer.Implement
 
         public static List<ModelType> GetListNavigation()
         {
-            return GetListParent().Where(item =>
-                (item.Character & EnumCharacter.Value.Recommend) != 0).ToList();
+            return List.Where(item => item.Status == EnumStatus.Value.Normal && (item.Character & EnumCharacter.Value.Recommend) != 0).ToList();
         }
 
         public static List<ModelType> GetListIndex()
         {
-            return GetListParent().Where(item =>
-                (item.Character & EnumCharacter.Value.Index) != 0).ToList();
+            return List.Where(item => item.Status == EnumStatus.Value.Normal && (item.Character & EnumCharacter.Value.Index) != 0).ToList();
         }
 
     }

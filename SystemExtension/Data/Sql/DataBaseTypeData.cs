@@ -159,6 +159,8 @@ namespace System.Data.Sql
             return this;
         }
 
+        #region 获取属性
+
         /// <summary>
         /// 获取属性数组
         /// </summary>
@@ -191,6 +193,20 @@ namespace System.Data.Sql
         }
 
         /// <summary>
+        /// 获取属性数组
+        /// </summary>
+        /// <param name="propertyNames"></param>
+        /// <returns></returns>
+        public PropertyInfo[] GetPropertys(params string[] propertyNames)
+        {
+            if (propertyNames == null || propertyNames.Length <= 0 || propertyNames.All(string.IsNullOrEmpty))
+            {
+                return null;
+            }
+            return GetPropertys(item => propertyNames.Contains(item.Name));
+        }
+
+        /// <summary>
         /// 获取属性
         /// </summary>
         /// <param name="propertyName"></param>
@@ -206,6 +222,10 @@ namespace System.Data.Sql
                     .FirstOrDefault(
                         item => string.Equals(item.Name, propertyName, StringComparison.CurrentCultureIgnoreCase));
         }
+
+        #endregion
+
+        #region 获取sql参数
 
         /// <summary>
         /// 获取sql参数数组
@@ -231,9 +251,11 @@ namespace System.Data.Sql
                 }
                 if (predicate != null)
                 {
-                    var tableFieldInfo =
-                        item.Key.GetCustomAttribute(typeof(TableFieldInfoAttribute)) as TableFieldInfoAttribute;
-                    return predicate(tableFieldInfo == null ? TableFieldLable.None : tableFieldInfo.Lable);
+                    return predicate(
+                        !(item.Key.GetCustomAttribute(typeof(TableFieldInfoAttribute)) is TableFieldInfoAttribute
+                            tableFieldInfo)
+                            ? TableFieldLable.None
+                            : tableFieldInfo.Lable);
                 }
                 return true;
             }).Select(item => item.Value).ToArray();
@@ -262,6 +284,19 @@ namespace System.Data.Sql
         }
 
         /// <summary>
+        /// 获取sql参数数组
+        /// </summary>
+        /// <param name="sqlParameterNames"></param>
+        /// <returns></returns>
+        public SqlParameter[] GetSqlParameters(params string[] sqlParameterNames)
+        {
+            return GetSqlParameters(new PermitImplement<string>(true, sqlParameterNames)
+            {
+                Comparer = new StringEqualityComparer(StringComparison.CurrentCultureIgnoreCase)
+            });
+        }
+
+        /// <summary>
         /// 获取sql参数
         /// </summary>
         /// <param name="sqlParameterName">sql参数名称</param>
@@ -280,6 +315,8 @@ namespace System.Data.Sql
                                 StringComparison.CurrentCultureIgnoreCase));
         }
 
+        #endregion
+
         /// <summary>
         /// 重置
         /// </summary>
@@ -292,6 +329,35 @@ namespace System.Data.Sql
                 Model = null;
             }
             return this;
+        }
+    }
+
+    public static class DataBaseTypeDataExtension
+    {
+        /// <summary>
+        /// 获取所有筛选字段
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public static string[] GetAllSelect<T>(this DataBaseTypeData<T> model) where T : class
+        {
+            return model?.GetSqlParameters().Select(item => $"[{item.ParameterName}]").ToArray();
+        }
+
+        /// <summary>
+        /// 获取所有筛选字段字符串
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public static string GetAllSelectString<T>(this DataBaseTypeData<T> model) where T : class
+        {
+            if (model == null)
+            {
+                return null;
+            }
+            return string.Join(",", model.GetSqlParameters().Select(item => $"[{item.ParameterName}]"));
         }
     }
 }

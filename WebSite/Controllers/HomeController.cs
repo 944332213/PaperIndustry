@@ -14,10 +14,10 @@ namespace Lushi.PaperProducts.Ui.WebSite.Controllers
 
             Try(() =>
             {
-                view.Column = ColumnTypeLogic.GetListIndex();
+                view.Column = new ArticleLogic().GetListTypeArticle(ColumnTypeLogic.GetListIndex());
             });
 
             return View(view);
         }
-	}
+    }
 }

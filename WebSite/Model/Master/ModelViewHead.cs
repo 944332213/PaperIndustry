@@ -3,7 +3,7 @@ using Lushi.PaperProducts.Model.Recombination;
 
 namespace Lushi.PaperProducts.Ui.WebSite.Model.Master
 {
-    public class ModelViewHead
+    public class ModelViewHead: IModelView
     {
         public List<ModelType> Navigation { get; set; }
     }

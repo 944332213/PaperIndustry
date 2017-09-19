@@ -104,7 +104,9 @@
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Css\body.css" />
+    <Content Include="Css\effect\carousel\slider.css" />
     <Content Include="Css\head.css" />
+    <Content Include="Css\home.css" />
     <Content Include="Css\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Image\020160518122553919.jpg" />
@@ -113,6 +115,8 @@
     <Content Include="Image\320160418013134307.png" />
     <Content Include="Image\420160418013146422.png" />
     <Content Include="Image\520160418013209191.png" />
+    <Content Include="Image\bg1.png" />
+    <Content Include="Image\common\noimage.jpg" />
     <Content Include="Image\head\line1.png" />
     <Content Include="Image\head\logo.png" />
     <Content Include="Image\head\menu\brand.png" />
@@ -123,6 +127,14 @@
     <Content Include="Image\head\menu\join.png" />
     <Content Include="Image\head\menu\news.png" />
     <Content Include="Image\head\menu\tel.png" />
+    <Content Include="Image\home\carousel\50755c41-857b-41b6-8008-e6cffd18d900.jpg" />
+    <Content Include="Image\home\carousel\9d8d9762-08d7-46a3-bd7a-035ad13c53ac.jpg" />
+    <Content Include="Image\home\carousel\b2174f71-51d7-4545-b768-3bb15c379b56.jpg" />
+    <Content Include="Image\home\carousel\f77d31b5-370d-4c5b-af17-626cb5a669da.jpg" />
+    <Content Include="Image\home\tile\38691b91-2079-45d2-a758-5736e02f0f07.jpg" />
+    <Content Include="Image\home\tile\790191aa-2986-498b-b2ed-fa98d1a1f762.jpg" />
+    <Content Include="Image\home\tile\7d5f70b8-9fca-47ed-838b-b77d3739a075.jpg" />
+    <Content Include="Scripts\effect\carousel\slider.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Web.config" />
@@ -138,6 +150,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Model\Home\ModelViewIndex.cs" />
+    <Compile Include="Model\IModelView.cs" />
     <Compile Include="Model\Master\ModelViewHead.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -158,6 +171,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\common\" />
+    <Folder Include="Scripts\home\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataBase\DataBase.csproj">
