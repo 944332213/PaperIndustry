@@ -57,3 +57,8 @@
     font-weight: bold;
     text-decoration: none;
 }
+.border {
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
