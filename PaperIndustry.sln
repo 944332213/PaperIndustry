@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ui", "Ui", "{130D858D-E799-4CF7-8F91-D2A81AD122A0}"
 EndProject
@@ -40,10 +40,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{DB3ED73A-F0E1-43C9-8536-F065D7E430D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dll", "dll", "{904074FC-F5F2-4BB5-9B83-6A754E7E99C7}"
-	ProjectSection(SolutionItems) = preProject
-		_Data\dll\Newtonsoft.Json.dll = _Data\dll\Newtonsoft.Json.dll
-		..\964230\Nsfttz\_Data\dll\Newtonsoft.Json.xml = ..\964230\Nsfttz\_Data\dll\Newtonsoft.Json.xml
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebExtension", "WebExtension\WebExtension.csproj", "{C59CABBE-525C-4A3A-8D67-B43F8DEA43D7}"
 EndProject
