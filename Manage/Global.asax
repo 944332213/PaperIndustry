@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Lushi.PaperProducts.Ui.Manage.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Lvshi.PaperProducts.Ui.Manage.MvcApplication" Language="C#" %>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 
-namespace Nsfttz.DataAccessLayer.Client.Config
+namespace Nsfttz.Common.Config
 {
     /// <summary>
     /// 配置管理

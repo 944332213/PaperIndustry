@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Lushi.PaperProducts.Model.Recombination;
+using Lvshi.PaperProducts.Model.Recombination;
 
-namespace Lushi.PaperProducts.Ui.WebSite.Model.Master
+namespace Lvshi.PaperProducts.Ui.WebSite.Model.Master
 {
     public class ModelViewHead: IModelView
     {

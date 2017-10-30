@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{87090D9B-3F05-4E2F-A9DE-6EC94CCF462A}</ProjectGuid>
+    <ProjectGuid>{3636FF93-047A-48C6-91FD-58F14624E132}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nsfttz.DataAccessLayer.DataTable.SqlServer.Base</RootNamespace>
-    <AssemblyName>SqlServer.Base</AssemblyName>
+    <RootNamespace>Lvshi.PaperProducts.Model.Table</RootNamespace>
+    <AssemblyName>Lvshi.Table</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,18 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\BaseRepository.cs" />
-    <Compile Include="Base\BaseRepositoryExtension.cs" />
+    <Compile Include="EnumCharacter.cs" />
+    <Compile Include="EnumColumnTypeDisplayModel.cs" />
+    <Compile Include="EnumColumnTypeLevel.cs" />
+    <Compile Include="EnumStatus.cs" />
+    <Compile Include="EnumValueName.cs" />
+    <Compile Include="StructMenuIcon.cs" />
+    <Compile Include="ModelColumnType.cs" />
+    <Compile Include="ModelArticle.cs" />
+    <Compile Include="ModelGuestbook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SqlServer\SqlServer.csproj">
-      <Project>{9b64f27b-6488-4712-9013-70017ff4f681}</Project>
-      <Name>SqlServer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SystemExtension\SystemExtension.csproj">
+    <ProjectReference Include="..\SystemExtension\Nsfttz.SystemExtension.csproj">
       <Project>{3c4bb7ec-b4a6-44d1-b908-71e576db8db8}</Project>
-      <Name>SystemExtension</Name>
+      <Name>Nsfttz.SystemExtension</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

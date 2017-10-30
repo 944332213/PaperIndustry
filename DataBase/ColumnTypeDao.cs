@@ -1,8 +1,8 @@
-﻿using Lushi.PaperProducts.Model.Table;
-using Nsfttz.DataAccessLayer.Client.Config;
+﻿using Lvshi.PaperProducts.Model.Table;
+using Nsfttz.Common.Config;
 using Nsfttz.DataAccessLayer.DataTable.SqlServer.Base.Base;
 
-namespace Lushi.PaperProducts.DataAccessLayer.DataBase
+namespace Lvshi.PaperProducts.DataAccessLayer.DataBase
 {
     public class ColumnTypeDao : BaseIdentityRepository<ModelColumnType>
     {

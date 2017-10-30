@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using Lushi.PaperProducts.DataAccessLayer.DataBase;
-using Lushi.PaperProducts.Model.Recombination;
-using Lushi.PaperProducts.Model.Table;
+using Lvshi.PaperProducts.DataAccessLayer.DataBase;
+using Lvshi.PaperProducts.Model.Recombination;
+using Lvshi.PaperProducts.Model.Table;
 
-namespace Lushi.PaperProducts.BusinessLogicLayer.Implement
+namespace Lvshi.PaperProducts.BusinessLogicLayer.Implement
 {
     /// <summary>
     /// 栏目类型业务逻辑

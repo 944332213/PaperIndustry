@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace WebSite
+namespace Lvshi.PaperProducts.Ui.WebSite
 {
     public class BundleConfig
     {

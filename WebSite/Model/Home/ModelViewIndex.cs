@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Lushi.PaperProducts.Model.Recombination;
-using Lushi.PaperProducts.Model.Table;
+using Lvshi.PaperProducts.Model.Recombination;
+using Lvshi.PaperProducts.Model.Table;
 
-namespace Lushi.PaperProducts.Ui.WebSite.Model.Home
+namespace Lvshi.PaperProducts.Ui.WebSite.Model.Home
 {
     public class ModelViewIndex: IModelView
     {

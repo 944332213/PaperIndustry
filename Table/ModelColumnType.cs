@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.Sql.Table;
 using System.Data.Sql.Table.Attribute;
 
-namespace Lushi.PaperProducts.Model.Table
+namespace Lvshi.PaperProducts.Model.Table
 {
     [Serializable]
     public class ModelColumnType

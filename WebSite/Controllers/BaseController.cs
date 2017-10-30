@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace Lushi.PaperProducts.Ui.WebSite.Controllers
+namespace Lvshi.PaperProducts.Ui.WebSite.Controllers
 {
     public class BaseController : Controller
     {

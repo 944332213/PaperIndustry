@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
-using Lushi.PaperProducts.BusinessLogicLayer.Implement;
-using Lushi.PaperProducts.Ui.WebSite.Model.Home;
+using Lvshi.PaperProducts.BusinessLogicLayer.Implement;
+using Lvshi.PaperProducts.Ui.WebSite.Model.Home;
 
-namespace Lushi.PaperProducts.Ui.WebSite.Controllers
+namespace Lvshi.PaperProducts.Ui.WebSite.Controllers
 {
     public class HomeController : BaseController
     {

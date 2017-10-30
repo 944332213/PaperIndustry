@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lushi.PaperProducts.Ui.WebSite</RootNamespace>
-    <AssemblyName>WebSite</AssemblyName>
+    <RootNamespace>Lvshi.PaperProducts.Ui.WebSite</RootNamespace>
+    <AssemblyName>Lvshi.WebSite</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -225,25 +225,25 @@
     <Folder Include="Scripts\home\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataBase\DataBase.csproj">
+    <ProjectReference Include="..\DataBase\Lvshi.DataBase.csproj">
       <Project>{53dccbd0-4ab3-4ca2-9130-373f9c1edc94}</Project>
-      <Name>DataBase</Name>
+      <Name>Lvshi.DataBase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Implement\Implement.csproj">
+    <ProjectReference Include="..\Implement\Lvshi.Implement.csproj">
       <Project>{3c74c040-c793-4725-8f03-e2a5f6d05e01}</Project>
-      <Name>Implement</Name>
+      <Name>Lvshi.Implement</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Recombination\Recombination.csproj">
+    <ProjectReference Include="..\Recombination\Lvshi.Recombination.csproj">
       <Project>{e15b3019-c47c-4614-9f2d-b640d3957c5c}</Project>
-      <Name>Recombination</Name>
+      <Name>Lvshi.Recombination</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Serialize\Serialize.csproj">
+    <ProjectReference Include="..\Serialize\Nsfttz.Serialize.csproj">
       <Project>{c9a9c445-8034-4fae-820c-2e9a236acea8}</Project>
-      <Name>Serialize</Name>
+      <Name>Nsfttz.Serialize</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Table\Table.csproj">
+    <ProjectReference Include="..\Table\Lvshi.Table.csproj">
       <Project>{3636ff93-047a-48c6-91fd-58f14624e132}</Project>
-      <Name>Table</Name>
+      <Name>Lvshi.Table</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -1,6 +1,6 @@
-﻿using Lushi.PaperProducts.DataAccessLayer.DataBase;
+﻿using Lvshi.PaperProducts.DataAccessLayer.DataBase;
 
-namespace Lushi.PaperProducts.BusinessLogicLayer.Implement
+namespace Lvshi.PaperProducts.BusinessLogicLayer.Implement
 {
     /// <summary>
     /// 留言板业务逻辑

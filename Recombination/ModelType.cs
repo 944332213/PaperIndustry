@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Runtime.Serialization;
-using Lushi.PaperProducts.Model.Table;
+using Lvshi.PaperProducts.Model.Table;
 
-namespace Lushi.PaperProducts.Model.Recombination
+namespace Lvshi.PaperProducts.Model.Recombination
 {
     [Serializable]
     public class ModelType : ModelColumnType, ISerializable

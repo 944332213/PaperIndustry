@@ -5,7 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using Nsfttz.DataAccessLayer.Client.Config;
+using Nsfttz.Common.Config;
 
 namespace Nsfttz.DataAccessLayer.Client.SqlServer
 {

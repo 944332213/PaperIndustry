@@ -1,4 +1,4 @@
-﻿namespace Lushi.PaperProducts.Model.Table
+﻿namespace Lvshi.PaperProducts.Model.Table
 {
     public static class EnumColumnTypeDisplayModel
     {

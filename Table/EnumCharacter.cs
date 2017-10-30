@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lushi.PaperProducts.Model.Table
+namespace Lvshi.PaperProducts.Model.Table
 {
     public static class EnumCharacter
     {

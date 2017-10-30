@@ -1,4 +1,4 @@
-﻿namespace Lushi.PaperProducts.Ui.WebSite.Model
+﻿namespace Lvshi.PaperProducts.Ui.WebSite.Model
 {
     public interface IModelView
     {
