@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ui", "Ui", "{130D858D-E799-4CF7-8F91-D2A81AD122A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.WebSite", "WebSite\Lvshi.WebSite.csproj", "{C0ECF540-8130-434B-BE94-6BC6727F57BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.WebSite", "Lvshi.WebSite\Lvshi.WebSite.csproj", "{C0ECF540-8130-434B-BE94-6BC6727F57BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3EFBDC4C-9E13-4918-8EC1-0A3399DF6E11}"
 EndProject
@@ -15,33 +15,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogicLayer", "Busin
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccessLayer", "DataAccessLayer", "{29431F92-CFE7-4416-BB3A-83D8BAF551F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.Manage", "Manage\Lvshi.Manage.csproj", "{F6566231-124D-492F-98F7-8F5A6C67537E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.Manage", "Lvshi.Manage\Lvshi.Manage.csproj", "{F6566231-124D-492F-98F7-8F5A6C67537E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.Table", "Table\Lvshi.Table.csproj", "{3636FF93-047A-48C6-91FD-58F14624E132}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.Table", "Lvshi.Table\Lvshi.Table.csproj", "{3636FF93-047A-48C6-91FD-58F14624E132}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.Implement", "Implement\Lvshi.Implement.csproj", "{3C74C040-C793-4725-8F03-E2A5F6D05E01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.Implement", "Lvshi.Implement\Lvshi.Implement.csproj", "{3C74C040-C793-4725-8F03-E2A5F6D05E01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.SqlServer", "SqlServer\Nsfttz.SqlServer.csproj", "{9B64F27B-6488-4712-9013-70017FF4F681}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.SqlServer", "Nsfttz.SqlServer\Nsfttz.SqlServer.csproj", "{9B64F27B-6488-4712-9013-70017FF4F681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.DataBase", "DataBase\Lvshi.DataBase.csproj", "{53DCCBD0-4AB3-4CA2-9130-373F9C1EDC94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.DataBase", "Lvshi.DataBase\Lvshi.DataBase.csproj", "{53DCCBD0-4AB3-4CA2-9130-373F9C1EDC94}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extension", "Extension", "{ACA6976E-EA6D-4DEE-B931-9656B9123DC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.SystemExtension", "SystemExtension\Nsfttz.SystemExtension.csproj", "{3C4BB7EC-B4A6-44D1-B908-71E576DB8DB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.SystemExtension", "Nsfttz.SystemExtension\Nsfttz.SystemExtension.csproj", "{3C4BB7EC-B4A6-44D1-B908-71E576DB8DB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.Config", "Config\Nsfttz.Config.csproj", "{2DDE6664-D278-4E02-8275-01E099C09CA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.Config", "Nsfttz.Config\Nsfttz.Config.csproj", "{2DDE6664-D278-4E02-8275-01E099C09CA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.Recombination", "Recombination\Lvshi.Recombination.csproj", "{E15B3019-C47C-4614-9F2D-B640D3957C5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lvshi.Recombination", "Lvshi.Recombination\Lvshi.Recombination.csproj", "{E15B3019-C47C-4614-9F2D-B640D3957C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.SqlServer.Base", "SqlServer.Base\Nsfttz.SqlServer.Base.csproj", "{87090D9B-3F05-4E2F-A9DE-6EC94CCF462A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.SqlServer.Base", "Nsfttz.SqlServer.Base\Nsfttz.SqlServer.Base.csproj", "{87090D9B-3F05-4E2F-A9DE-6EC94CCF462A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.Serialize", "Serialize\Nsfttz.Serialize.csproj", "{C9A9C445-8034-4FAE-820C-2E9A236ACEA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.Serialize", "Nsfttz.Serialize\Nsfttz.Serialize.csproj", "{C9A9C445-8034-4FAE-820C-2E9A236ACEA8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{DB3ED73A-F0E1-43C9-8536-F065D7E430D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dll", "dll", "{904074FC-F5F2-4BB5-9B83-6A754E7E99C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.WebExtension", "WebExtension\Nsfttz.WebExtension.csproj", "{C59CABBE-525C-4A3A-8D67-B43F8DEA43D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsfttz.WebExtension", "Nsfttz.WebExtension\Nsfttz.WebExtension.csproj", "{C59CABBE-525C-4A3A-8D67-B43F8DEA43D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

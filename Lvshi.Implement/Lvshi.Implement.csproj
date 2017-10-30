@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C74C040-C793-4725-8F03-E2A5F6D05E01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lvshi.PaperProducts.BusinessLogicLayer.Implement</RootNamespace>
+    <AssemblyName>Lvshi.Implement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArticleLogic.cs" />
+    <Compile Include="ColumnTypeLogic.cs" />
+    <Compile Include="GuestbookLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lvshi.DataBase\Lvshi.DataBase.csproj">
+      <Project>{53dccbd0-4ab3-4ca2-9130-373f9c1edc94}</Project>
+      <Name>Lvshi.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lvshi.Recombination\Lvshi.Recombination.csproj">
+      <Project>{e15b3019-c47c-4614-9f2d-b640d3957c5c}</Project>
+      <Name>Lvshi.Recombination</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nsfttz.SqlServer.Base\Nsfttz.SqlServer.Base.csproj">
+      <Project>{87090D9B-3F05-4E2F-A9DE-6EC94CCF462A}</Project>
+      <Name>Nsfttz.SqlServer.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nsfttz.SystemExtension\Nsfttz.SystemExtension.csproj">
+      <Project>{3c4bb7ec-b4a6-44d1-b908-71e576db8db8}</Project>
+      <Name>Nsfttz.SystemExtension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lvshi.Table\Lvshi.Table.csproj">
+      <Project>{3636ff93-047a-48c6-91fd-58f14624e132}</Project>
+      <Name>Lvshi.Table</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
