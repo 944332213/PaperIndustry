@@ -1,34 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Sql;
 using System.Linq;
 using Lvshi.PaperProducts.Model.Table;
 using Nsfttz.Common.Config;
-using Nsfttz.DataAccessLayer.DataTable.SqlServer.Base.Base;
+using Nsfttz.DataAccessLayer.Repository;
+using Nsfttz.DataAccessLayer.Repository.Data;
+using Nsfttz.DataAccessLayer.Repository.SqlServer;
 
 namespace Lvshi.PaperProducts.DataAccessLayer.DataBase
 {
-    public class ArticleDao : BaseIdentityRepository<ModelArticle>
+    public class ArticleDao : SqlServerBaseIdentityRepository<ModelArticle, int>
     {
-        protected override string ConnectionString
-        {
-            get { return ConfigManager.GetAppSetting("LushiPaperProductsConnectionString"); }
-        }
-
-        public override string TableName
-        {
-            get { return "Article"; }
-        }
+        protected override string ConnectionString => ConfigManager.GetAppSetting("LushiPaperProductsConnectionString");
 
         public List<ModelArticle> SelectListByType(params int[] ids)
         {
-            DataBaseTypeData.Reset();
-            DataBaseTypeData.Model = new ModelArticle
+            DatabaseTypeData.DbParameterData = new ModelArticle
             {
                 Status = EnumStatus.Value.Normal,
             };
             Sql.AddText("SELECT");
-            Sql.AddText(DataBaseTypeData.GetAllSelectString());
+            Sql.AddText(DatabaseTypeData.GetAllSelectString(DatabaseServerType));
             Sql.AddText("FROM");
             Sql.AddText(TableName);
             Sql.AddText("WITH(NOLOCK)");
@@ -42,8 +34,8 @@ namespace Lvshi.PaperProducts.DataAccessLayer.DataBase
                         ? $"TypeId = {ids.First()}"
                         : $"TypeId IN({string.Join(",", ids)})",
             }).Where(item => !string.IsNullOrEmpty(item))));
-            Sql.AddParameter(DataBaseTypeData.GetSqlParameters(new PermitImplement<string>(true, whereNames)));
-            return this.ExecuteTableToList();
+            Sql.AddParameter(DatabaseTypeData.GetColumnsByPropertyNames(new PermitImplement<string>(true, whereNames)).Select(item => item.DbParameter));
+            return this.ExecuteTableToEntities()?.ToList();
         }
     }
 }

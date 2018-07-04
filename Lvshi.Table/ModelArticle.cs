@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Data.Sql.Table;
-using System.Data.Sql.Table.Attribute;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Lvshi.PaperProducts.Model.Table
 {
+    [Table("Article")]
     [Serializable]
     public class ModelArticle
     {
-        [TableFieldInfo(Lable = TableFieldLable.Identity | TableFieldLable.PrimaryKey)]
+        [Key]
+        [Identity]
         public int Id { get; set; }
 
         public string Title { get; set; }

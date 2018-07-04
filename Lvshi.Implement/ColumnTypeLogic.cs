@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using Lvshi.PaperProducts.DataAccessLayer.DataBase;
 using Lvshi.PaperProducts.Model.Recombination;
@@ -39,15 +38,15 @@ namespace Lvshi.PaperProducts.BusinessLogicLayer.Implement
                 {
                     return;
                 }
-                var dataTable = Dao.SelectAll();
-                if (dataTable == null || dataTable.Rows.Count <= 0)
+                var items = Dao.SelectAllItems()?.ToArray();
+                if (items == null)
                 {
                     return;
                 }
-                _sList.AddRange(dataTable.ToEntityList(dr => new ModelType
+                _sList.AddRange(items.Select(item => new ModelType
                 {
-                    Parent = new ModelType { Id = DataConvert.TryParse<int>(dr["ParentId"].ToString()) ?? 0, },
-                }, TypeData.GetPropertys<ModelType>(), new StringPermitImplement(false, "Parent")));
+                    Parent = new ModelType { Id = item.ParentId }
+                }));
                 _sList.Remove(null);
                 IsEstablish = false;
             }

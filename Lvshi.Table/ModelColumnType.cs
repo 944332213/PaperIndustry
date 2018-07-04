@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Data;
-using System.Data.Sql.Table;
-using System.Data.Sql.Table.Attribute;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Lvshi.PaperProducts.Model.Table
 {
+    [Table("ColumnType")]
     [Serializable]
     public class ModelColumnType
     {
-        [TableFieldInfo(Lable = TableFieldLable.Identity | TableFieldLable.PrimaryKey)]
+        [Key]
+        [Identity]
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -24,8 +25,7 @@ namespace Lvshi.PaperProducts.Model.Table
         public EnumCharacter.Value Character { get; set; }
 
         public EnumColumnTypeDisplayModel.Value DisplayModel { get; set; }
-
-        [TableFieldInfo(SqlDbType.Int)]
+        
         public int Icon { get; set; }
 
         public int Rank { get; set; }

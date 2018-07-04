@@ -1,0 +1,5 @@
+*.vspscc
+*.vssscc
+*.pubxml
+\packages
+!\packages\repositories.config

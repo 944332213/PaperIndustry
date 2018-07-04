@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Lvshi.PaperProducts.Model.Table</RootNamespace>
     <AssemblyName>Lvshi.Table</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Nsfttz.ComponentModelExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nsfttz.ComponentModelExtension.1.0.0\lib\net47\Nsfttz.ComponentModelExtension.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,7 +48,6 @@
     <Compile Include="EnumColumnTypeDisplayModel.cs" />
     <Compile Include="EnumColumnTypeLevel.cs" />
     <Compile Include="EnumStatus.cs" />
-    <Compile Include="EnumValueName.cs" />
     <Compile Include="StructMenuIcon.cs" />
     <Compile Include="ModelColumnType.cs" />
     <Compile Include="ModelArticle.cs" />
@@ -51,10 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nsfttz.SystemExtension\Nsfttz.SystemExtension.csproj">
-      <Project>{3c4bb7ec-b4a6-44d1-b908-71e576db8db8}</Project>
-      <Name>Nsfttz.SystemExtension</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
