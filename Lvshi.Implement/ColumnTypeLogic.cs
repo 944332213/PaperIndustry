@@ -19,7 +19,7 @@ namespace Lvshi.PaperProducts.BusinessLogicLayer.Implement
 
         internal static bool IsEstablish;
 
-        protected static ColumnTypeDao Dao => new ColumnTypeDao();
+        protected ColumnTypeDao Dao => new ColumnTypeDao();
 
         static ColumnTypeLogic()
         {
@@ -38,7 +38,7 @@ namespace Lvshi.PaperProducts.BusinessLogicLayer.Implement
                 {
                     return;
                 }
-                var items = Dao.SelectAllItems()?.ToArray();
+                var items = new ColumnTypeDao().SelectAllItems()?.ToArray();
                 if (items == null)
                 {
                     return;

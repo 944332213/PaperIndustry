@@ -46,7 +46,7 @@
     <Reference Include="Nsfttz.Repository.SqlServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nsfttz.Repository.SqlServer.1.0.0\lib\net47\Nsfttz.Repository.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Nsfttz.SystemExtension, Version=1.0.0.0, Culture=neutral, PublicKeyToken=869a54e045357d2d, processorArchitecture=MSIL">
+    <Reference Include="Nsfttz.SystemExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nsfttz.SystemExtension.1.0.0\lib\net47\Nsfttz.SystemExtension.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -70,7 +70,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

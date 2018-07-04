@@ -6,9 +6,6 @@ namespace Lvshi.PaperProducts.DataAccessLayer.DataBase
 {
     public class GuestbookDao : SqlServerBaseIdentityRepository<ModelGuestbook, int>
     {
-        protected override string ConnectionString
-        {
-            get { return ConfigManager.GetAppSetting("LushiPaperProductsConnectionString"); }
-        }
+        protected override string ConnectionString => ConfigManager.GetAppSetting("LushiPaperProductsConnectionString");
     }
 }
