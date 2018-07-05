@@ -31,23 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Nsfttz.ComponentModelExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nsfttz.ComponentModelExtension.1.0.0\lib\net47\Nsfttz.ComponentModelExtension.dll</HintPath>
-    </Reference>
     <Reference Include="Nsfttz.Config, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nsfttz.Config.1.0.0\lib\net47\Nsfttz.Config.dll</HintPath>
     </Reference>
-    <Reference Include="Nsfttz.Exceptions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=869a54e045357d2d, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nsfttz.Exceptions.1.0.0\lib\net47\Nsfttz.Exceptions.dll</HintPath>
-    </Reference>
-    <Reference Include="Nsfttz.InputOutput, Version=1.0.0.0, Culture=neutral, PublicKeyToken=869a54e045357d2d, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nsfttz.InputOutput.1.0.0\lib\net47\Nsfttz.InputOutput.dll</HintPath>
-    </Reference>
     <Reference Include="Nsfttz.Relational, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nsfttz.Relational.1.0.0\lib\net47\Nsfttz.Relational.dll</HintPath>
-    </Reference>
-    <Reference Include="Nsfttz.Relational.SqlServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nsfttz.Relational.SqlServer.1.0.0\lib\net47\Nsfttz.Relational.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Nsfttz.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nsfttz.Repository.1.0.0\lib\net47\Nsfttz.Repository.dll</HintPath>
@@ -57,9 +45,6 @@
     </Reference>
     <Reference Include="Nsfttz.SystemExtension, Version=1.0.0.0, Culture=neutral, PublicKeyToken=869a54e045357d2d, processorArchitecture=MSIL">
       <HintPath>..\packages\Nsfttz.SystemExtension.1.0.0\lib\net47\Nsfttz.SystemExtension.dll</HintPath>
-    </Reference>
-    <Reference Include="Nsfttz.WebAppoint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=869a54e045357d2d, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nsfttz.WebAppoint.1.0.0\lib\net47\Nsfttz.WebAppoint.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
